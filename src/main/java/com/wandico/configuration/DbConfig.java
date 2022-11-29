@@ -20,10 +20,10 @@ public class DbConfig {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/wandico?serverTimezone=UTC");
-      //  dataSource.setUrl("jdbc:mysql://db-mysql-nyc1-70449-do-user-12743879-0.b.db.ondigitalocean.com:25060/defaultdb?serverTimezone=UTC");
-        dataSource.setUsername("jboss");
-        dataSource.setPassword("jbossdbpassword");
+        //dataSource.setUrl("jdbc:mysql://localhost:3306/wandico?serverTimezone=UTC");
+        dataSource.setUrl("jdbc:mysql://db-mysql-nyc1-70449-do-user-12743879-0.b.db.ondigitalocean.com:25060/defaultdb?serverTimezone=UTC");
+        dataSource.setUsername("doadmin");
+        dataSource.setPassword("AVNS_u0EJ9GI8tIkjrmratKV");
         return dataSource;
     }
 

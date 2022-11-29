@@ -19,6 +19,15 @@ public class LoginService {
 
     }
 
+    public boolean canLogin(String email, String password) {
+        UserDetails byUsernameAndPassword = loginRepo.findByUsernameAndPassword(email, password);
+        if (byUsernameAndPassword != null) {
+            return true;
+        }
+        return false;
+    }
+
+
     public void saveUserDetails(UserDetails userDetails) {
 
         userDetails.setPassword(userDetails.getPassword());
